@@ -1,0 +1,38 @@
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 声明包 -->
+	<package name="myPackage" extends="struts-default">  
+        <action name="Book" class="information.action.UserAction" method="getUsers">  
+            <!-- 设置物理视图 -->  
+            <result name="userList">UserList.jsp</result>  
+        </action>  
+   		
+        <action name="query" class="information.action.UserAction" method="getqueryUsers">
+            <result name="bookList">queryUser.jsp</result>
+        </action>
+        
+        <action name="detail" class="information.action.UserAction" method="getdetailUsers"> 
+            <result name="detailList">detailUser.jsp</result>
+        </action>
+        
+        <action name="delete" class="information.action.UserAction" method="getdeleteUsers"> 
+            <result name="userList">UserList.jsp</result>
+        </action>
+        
+        <action name="add" class="information.action.UserAction" method="getaddUsers"> 
+            <result name="false">warn.jsp</result>
+            <result name="userList">UserList.jsp</result>
+        </action>
+        
+        <action name="toupdate" class="information.action.UserAction" method="getU"> 
+            <result name="toUpdate">updateUser.jsp</result>
+        </action>
+        
+        <action name="update" class="information.action.UserAction" method="getupdateUsers"> 
+            <result name="userList">UserList.jsp</result>
+        </action>
+        
+    </package> 
+</struts>
